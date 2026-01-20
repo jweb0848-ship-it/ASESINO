@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesino, Doctor, Detective - Solo Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🕵️‍♂️ Asesino, Doctor, Detective</h1>
+    <p class="subtitle">Encuentra al impostor antes de que acabe con todos...</p>
+
+    <div class="game-board" id="board">
+        </div>
+
+    <div class="controls">
+        <div id="log-box">Bienvenido, Detective. Selecciona un sospechoso para comenzar el Día 1.</div>
+        <div class="btn-group">
+            <button id="btn-inv" class="btn-investigate" onclick="investigate()" disabled>🔍 Investigar Rol</button>
+            <button id="btn-arr" class="btn-arrest" onclick="arrest()" disabled>⚖️ Arrestar (Acusar)</button>
+            <button id="btn-next" class="btn-next" onclick="nextDay()" style="display:none;">🌙 Ir a la Noche</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <h2 id="modal-title">GAME OVER</h2>
+        <p id="modal-msg">Mensaje</p>
+        <button class="btn-reset" onclick="location.reload()">Jugar de nuevo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
